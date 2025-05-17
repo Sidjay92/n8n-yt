@@ -1,7 +1,0 @@
-FROM n8nio/n8n:latest
-
-# Install ffmpeg, curl, and openssh-client (for ssh)
-RUN apt-get update && \
-    apt-get install -y ffmpeg curl openssh-client && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
