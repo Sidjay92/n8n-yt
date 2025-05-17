@@ -1,6 +1,7 @@
-FROM n8nio/n8n:latest
+FROM n8nio/n8n
 
-RUN apt-get update && \
-    apt-get install -y ffmpeg curl && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+USER root
+
+RUN apk add --no-cache ffmpeg curl
+
+USER node
